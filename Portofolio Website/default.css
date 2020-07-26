@@ -8,12 +8,21 @@
     --secondaryText:#4b5156;
 
     --themeDotBorder: #24292e;
+    --previewBg: rgb(251, 249, 243,  0.8);
+    --previewShadow: #f0ead6;
+
+    --btnColor: black;
 }
 
 
 html, body{
     padding : 0;
     margin : 0;
+
+}
+
+body *{
+    transition: 0.3s;
 
 }
 
@@ -50,6 +59,7 @@ h6{ font-size: 16px;}
     background-color: var(--mainColor);
     border-bottom:1px solid var(--borderColor);
     overflow: auto;
+    padding-bottom: 50px;
 }
 
 .s2{
@@ -89,6 +99,7 @@ h6{ font-size: 16px;}
         'nav-wrapper nav-wrapper'
         'left-column right-column'
     ;
+
 }
 
 .nav-wrapper{
@@ -126,6 +137,10 @@ h6{ font-size: 16px;}
     display: inline-block;
     margin-right: 5px;
     margin-left: 5px;    
+}
+
+#navigation a{
+    color: var(--mainText);
 }
 
 #dot-1{
@@ -207,6 +222,196 @@ h6{ font-size: 16px;}
 
 .right-column{
     grid-area: right-column;
+    display: grid;
+    align-content: center;
+
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+
+}
+
+#preview{
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+    position: relative;
+
+}
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+
+}
+
+#corner-tl{
+    top: -5px;
+    left: -5px;
+}
+#corner-tr{
+    top: -5px;
+    right: -5px;
+}
+
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+
+#corner-br{
+    bottom: -5px;
+    right: -5px;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 100px;
+
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+#social_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 70%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 25px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+
+  }
+
+
+.fa-instagram {
+    background: #3B5998;
+    color: white;
+  }
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+
+.post{
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: 7px 13px 31px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 13px 31px 1px rgba(0,0,0,0.75);
+    box-shadow: 7px 13px 31px 1px rgba(0,0,0,0.75);
+    
+}
+
+.thumbnail{
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+}
+
+.post-preview{
+    background-color: #fff;
+    padding: 15px;
+
+}
+
+.post-title{
+    color: black;
+    margin: 0;
+
+
+}
+
+.post-intro{
+    color: #4b5156;
+    font-size: 14px;
+
+}
+
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--borderColor);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+#contact-form label{
+    line-height: 2.7em;
+}
+
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+
+}
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--secondaryColor);
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    font-size: 14px;
+
+}
+
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--btnColor);
+    border: none;
+
 }
 
 
@@ -214,5 +419,20 @@ h6{ font-size: 16px;}
 @media screen and (max-width: 12000px){
     .main-container{
         width:95%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+    .right-column{
+        justify-content: center;
+
     }
 }

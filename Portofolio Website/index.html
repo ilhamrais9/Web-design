@@ -7,7 +7,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="default.css">
+    <link id="theme-style" rel="stylesheet" href="">
 </head>
 <body>
 
@@ -42,10 +44,10 @@
                     <img id="profile_pic" src="./images/Ilham.jpg" alt="Ilham Rais">
                     <h5 style="text-align: center; line-height:0;">Personalize theme</h5>
                     <div id="theme-option-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
                     <p id="settings-note">
                         Theme option will be saved for <br> your next visit
@@ -53,7 +55,20 @@
                 
                 </div>
                 <div class="right-column">
-                    right-column
+                    <div id="preview-shadow">
+                        <div id="preview">
+
+                            <div id="corner-tl" class="corner"></div>
+                            <div id="corner-tr" class="corner"></div>
+
+
+                            <h3>What I Do</h3>
+                            <p>I'm a python programmer that can do full stack web development and a python programmer</p>
+                        
+                            <div id="corner-bl" class="corner"></div>
+                            <div id="corner-br" class="corner"></div>
+                        </div>                        
+                    </div>
                 </div>
             </div>
 
@@ -62,20 +77,107 @@
 
     <section class="s2">
         <div class="main-container">
-            About
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4>More about me</h4>
+                    <p>I'm a new comer in web-developing that trying to make my own website that provide services to make porthofolio website</p>
+                    <p>Its starting with my own website that will became my master project and there will be some reference to my other website that i will build more!</p>
+                
+
+                    <hr>
+
+                    <h4>Top Expertise</h4>
+
+                    <p>Full Stack Developer with primary focus on Django and React: Download Resume <a target="_blank" href="CV Ilham.pdf">Download Resume</a></p>
+                    
+                    <div id="skills">
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>Javascript</li>
+                            <li>React</li>
+                            <li><HTML>
+                            <CSS></CSS></li>
+                        </ul>
+
+                        <ul>
+                            <li>Google maps API</li>
+                            <li>JS Charts</li>
+                            <li>SQL Database</li>
+                            <li>AWS (RDS/S3)</li>
+                            <li>Heroku</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="social-links">
+                    <img id="social_img" src="Asset 1@4x.png" alt="My Logo">
+                    <h3>Find me in twiiter and instagram</h3>
+                    <div>
+                    <a target="_blank" href="https://twitter.com/Hamrai_" class="fa fa-twitter"></a>
+                    <a target="_blank" href="https://www.instagram.com/ilhamrais9/" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </section>
 
     <section class="s1">
         <div class="main-container">
-            Portofolio
+            <h3 style="text-align: center;">Some of my past projects</h3>
+
+            <div class="post-wrapper">
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/Asset 2@4x.png" alt="Moritos">
+                        <div class="post-preview">
+                            <h6 class="post-title">Moritos</h6>
+                            <p class="post-intro">Desain animasi untuk PKM mengenai makanan snack yang juga dapat menyembuhkan penyakit</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="./images/Stiker@4x.png" alt="Stiker Donasi">
+                        <div class="post-preview">
+                            <h6 class="post-title">Gema Senin Kamis</h6>
+                            <p class="post-intro">Desain stiker untuk kotak makanan donasi yang dilakukan keluarga dari ramadhan ini</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/Gambar1@4x.png" alt="Desain animasi untuk presentasi ortu">
+                        <div class="post-preview">
+                            <h6 class="post-title">Desain animasi</h6>
+                            <p class="post-intro">Sempat diminta untuk mendesain animasi mengenai karakter untuk presentai ortu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section> 
 
     <section class="s2">
         <div class="main-container">
-        Contact me
+            <h3 style="text-align: center;">Get intouch</h3>
+
+
+            <form id="contact-form">
+                <label>Name</label>
+                <input class="input-field" type="text" name="name">
+                <label>Subject</label>
+                <input class="input-field" type="text" name="Subject">
+                <label>Email</label>
+                <input class="input-field" type="text" name="email">
+                <label>Message</label>
+                <textarea class="input-field" name="message"></textarea>
+
+                <input id="submit-btn" type="submit" value="Send">
+            </form>
+
         </div>
     </section>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
